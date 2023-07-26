@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href='../css/Emp_Details.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="navbar navbar-inverse topnav">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-left">
+                <li ><a href="#" style="color: white;"> FSE Details</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a onclick="logout()" style="color: white;" href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- The Modal -->
+    <div class="container">
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="row userbox">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-sm-4"><img src="../images/user.png" class="img-rounded" width="50%" height="30%" /><i class="bi-class-name"></i></div>
+                    <div class="col-sm-8">
+                        <h2><strong>Jennifer Smith</strong></h2>
+                        <strong>Country:</strong> <strong>DUBAI</strong>
+                    </div>
+                </div>
+            </div>
+            </div>
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><strong>VISA Details</strong></a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Status</th>
+                                    <th>Type</th>
+                                    <th>Last Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Thailand</td>
+                                    <td>Active</td>
+                                    <td>Buisness</td>
+                                    <td  onclick="displayVisaDetails()">
+                                    <img id="myImg" src="../images/link.png" alt="" style="width:28px;height:24px;" onclick="displayVisaDetails()">  25July, 2024</td>
+                                    <!--<td id="myImg" onclick="window.open('../images/visa.jpeg');"><a href=""> 25July, 2024</td>-->
+                                </tr>
+                                <tr>
+                                    <td>India</td>
+                                    <td>Expired</td>
+                                    <td>On Arrival</td>
+                                    <td><img id="myImg" src="../images/link.png" alt="" style="width:26px;height:24px;" onclick="displayVisaDetails()">  24,Feb 2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Indonesia</td>
+                                    <td>Under Processing</td>
+                                    <td>One Time</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><strong>Training Details</strong></a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Trainings</th>
+                                    <th>Stage</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Aspectic Filler</td>
+                                    <td>Planned</td>
+                                    <td>25/08/2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Combi</td>
+                                    <td>Attended</td>
+                                    <td>20/02/2021</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><strong>Medical Details</strong></a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Medical Condition</th>
+                                    <th>Medicine Required</th>
+                                    <th>Prescription</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Asthma</td>
+                                    <td>Inhaler</td>
+                                    <td><img id="myImg" src="../images/link.png" alt="" style="width:28px;height:24px;" onclick="displayMedicalDetails()"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><strong>Vaccination Details</strong></a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Vaccination</th>
+                                    <th>Validity</th>
+                                    <th>Certificate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Yellow Fever</td>
+                                    <td>2025</td>
+                                    <td><img id="myImg" src="../images/link.png" alt="" style="width:28px;height:24px;" onclick="displayVaccinationDetails()"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5"><strong>Education Details</strong></a>
+                    </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Degree</th>
+                                    <th>Specialization</th>
+                                    <th>Year</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Graduation</td>
+                                    <td>B.E Mechanical</td>
+                                    <td>2009</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close" onclick="closeVisaDetails()">&times;</span>
+      
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+      
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption" >Visa Details</div>
+      </div>
+    <script charset="utf-8" src="../js/Emp_Details.js"></script>
+</body>
+</html>
+

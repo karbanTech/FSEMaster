@@ -1,0 +1,109 @@
+﻿
+#grad {
+    height: max-content;
+    background-image: linear-gradient(to right, cyan, cornflowerblue);
+}
+
+.containerOverlay{
+    height:70%;
+    width:80%;
+    border-block:double;
+}
+.split {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+    left: 0;
+    width: 60%;
+    background-color: ghostwhite;
+}
+
+/* Control the right side */
+.right {
+    align-content:center;
+    width: 40%;
+    right: 0;
+    border-block-color:white;
+}
+
+.backImage {
+    display: flex;
+    background-image: url('../images/Eng.jpg');
+    background-size: cover; /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity:0.8;
+}
+
+.styleButton {
+    color: white;
+   text-align:center;
+    font-family: Amaranth;
+    height: 50px;
+    width: 240px;
+    background-color: coral;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.styleButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+    .styleButton span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+.styleButton:hover span {
+    padding-right: 25px;
+}
+
+    .styleButton:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+.div {
+    font-family: Amaranth;
+    font-display: fallback;
+    color: white;
+    margin-bottom: 70px;
+    padding-left: 40px;
+}
+
+    .div em {
+        color: orange;
+    }
+
+.FSE {
+    font-size: 40px;
+    padding-top: 60px;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+}
+
+.Sol {
+    font-size: 60px;
+}
+}
